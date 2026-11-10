@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": "heroforge:raw_heronite",
+  "result": {
+    "id": "heroforge:heronite_ingot"
+  },
+  "experience": 1.0,
+  "cookingtime": 100
+}

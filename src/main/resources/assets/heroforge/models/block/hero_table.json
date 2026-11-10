@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "heroforge:block/hero_table_side",
+    "down": "heroforge:block/hero_table_bottom",
+    "up": "heroforge:block/hero_table_top",
+    "north": "heroforge:block/hero_table_front",
+    "south": "heroforge:block/hero_table_side",
+    "east": "heroforge:block/hero_table_side",
+    "west": "heroforge:block/hero_table_side"
+  }
+}

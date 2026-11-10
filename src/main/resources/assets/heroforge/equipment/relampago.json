@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "heroforge:relampago"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "heroforge:relampago"
+      }
+    ]
+  }
+}

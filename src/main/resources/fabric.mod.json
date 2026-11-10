@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "heroforge",
+  "version": "${version}",
+  "name": "HeroForge",
+  "description": "Ocho superheroes originales con trajes, sueros, mineral propio, mesa de forja y poderes con teclas.",
+  "authors": ["HeroForge"],
+  "license": "MIT",
+  "icon": "assets/heroforge/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.heroforge.HeroForge"],
+    "client": ["com.heroforge.client.HeroForgeClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

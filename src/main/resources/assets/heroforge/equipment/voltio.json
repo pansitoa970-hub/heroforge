@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "heroforge:voltio"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "heroforge:voltio"
+      }
+    ]
+  }
+}

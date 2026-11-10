@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": "heroforge:heronite_ingot"
+  },
+  "result": {
+    "id": "heroforge:tejedor_boots"
+  }
+}

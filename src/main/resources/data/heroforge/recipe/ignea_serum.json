@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ISI",
+    "IBI",
+    " G "
+  ],
+  "key": {
+    "I": "heroforge:heronite_ingot",
+    "S": "minecraft:blaze_powder",
+    "B": "minecraft:glass_bottle",
+    "G": "minecraft:glistering_melon_slice"
+  },
+  "result": {
+    "id": "heroforge:ignea_serum"
+  }
+}

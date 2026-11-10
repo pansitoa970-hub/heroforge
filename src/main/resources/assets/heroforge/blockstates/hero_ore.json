@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "heroforge:block/hero_ore"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "heroforge:centinela"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "heroforge:centinela"
+      }
+    ]
+  }
+}

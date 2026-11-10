@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "heroforge:tejedor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "heroforge:tejedor"
+      }
+    ]
+  }
+}
