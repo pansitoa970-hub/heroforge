@@ -9,7 +9,7 @@
         "tag": "minecraft:stone_ore_replaceables"
       },
       "state": {
-        "Name": "heroforge:hero_ore"
+        "id": "heroforge:hero_ore"
       }
     },
     {
@@ -18,7 +18,7 @@
         "tag": "minecraft:deepslate_ore_replaceables"
       },
       "state": {
-        "Name": "heroforge:hero_ore"
+        "id": "heroforge:hero_ore"
       }
     }
   ]
