@@ -1,6 +1,8 @@
 package com.heroforge;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -17,7 +19,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.LightningBolt;
-import net.minecraft.world.entity.projectile.Snowball;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.Snowball;
 import net.minecraft.world.entity.projectile.hurtingprojectile.SmallFireball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -112,7 +114,7 @@ public final class HeroPowers {
 		if (slot != 1 && slot != 2) return;
 		Hero hero = getHero(p);
 		if (hero == null) {
-			p.displayClientMessage(Component.translatable("msg.heroforge.no_serum"), true);
+			p.sendOverlayMessage(Component.translatable("msg.heroforge.no_serum"));
 			return;
 		}
 		ServerLevel level = (ServerLevel) p.level();
@@ -120,7 +122,7 @@ public final class HeroPowers {
 		long[] cd = COOLDOWNS.computeIfAbsent(p.getUUID(), k -> new long[3]);
 		if (now < cd[slot]) {
 			long secs = (cd[slot] - now + 19) / 20;
-			p.displayClientMessage(Component.translatable("msg.heroforge.cooldown", secs), true);
+			p.sendOverlayMessage(Component.translatable("msg.heroforge.cooldown", secs));
 			return;
 		}
 		cd[slot] = now + (slot == 1 ? hero.cooldown1 : hero.cooldown2);
@@ -251,7 +253,10 @@ public final class HeroPowers {
 		if (slot == 1) {
 			BlockHitResult hit = rayBlock(p, 40);
 			if (hit == null) return;
-			LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.TRIGGERED);
+			@SuppressWarnings("unchecked")
+			EntityType<LightningBolt> boltType = (EntityType<LightningBolt>) BuiltInRegistries.ENTITY_TYPE
+					.getValue(Identifier.withDefaultNamespace("lightning_bolt"));
+			LightningBolt bolt = boltType.create(level, EntitySpawnReason.TRIGGERED);
 			if (bolt != null) {
 				Vec3 t = hit.getLocation();
 				bolt.setPos(t.x, t.y, t.z);

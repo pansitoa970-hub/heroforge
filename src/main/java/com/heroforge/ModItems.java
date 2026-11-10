@@ -1,6 +1,6 @@
 package com.heroforge;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -69,7 +69,7 @@ public class ModItems {
 
 	public static final CreativeModeTab TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
 			HeroForge.id("main"),
-			FabricItemGroup.builder()
+			FabricCreativeModeTab.builder()
 					.title(Component.translatable("itemGroup.heroforge"))
 					.icon(() -> new ItemStack(HERONITE_INGOT))
 					.displayItems((params, output) -> {

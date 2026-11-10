@@ -40,7 +40,7 @@ public class HeroForge implements ModInitializer {
 				ResourceKey.create(Registries.PLACED_FEATURE, id("hero_ore")));
 
 		// Red: el cliente avisa que tecla de poder se pulso
-		PayloadTypeRegistry.playC2S().register(PowerKeyPayload.TYPE, PowerKeyPayload.CODEC);
+		PayloadTypeRegistry.serverboundPlay().register(PowerKeyPayload.TYPE, PowerKeyPayload.CODEC);
 		ServerPlayNetworking.registerGlobalReceiver(PowerKeyPayload.TYPE, (payload, context) -> {
 			ServerPlayer player = context.player();
 			context.server().execute(() -> HeroPowers.useAbility(player, payload.slot()));

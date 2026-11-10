@@ -25,7 +25,7 @@ public class SerumItem extends Item {
 			HeroPowers.setHero(sp, hero);
 			player.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 100, 0));
 			player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1));
-			player.displayClientMessage(Component.translatable("msg.heroforge.serum_ok", hero.displayName()), true);
+			player.sendOverlayMessage(Component.translatable("msg.heroforge.serum_ok", hero.displayName()));
 			player.getItemInHand(hand).consume(1, player);
 		}
 		return InteractionResult.SUCCESS;
